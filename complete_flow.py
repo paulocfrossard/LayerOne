@@ -6,7 +6,6 @@ from history import file_etapa, etapa_write
 from log import logging
 from upscaling_img import upscaling_image
 
-#[image2 @ 0x5618c84ca200] Could find no file or sequence with path '/media/midias_3/Projeto Lain/projeto_lain_experience/arquivos base/episodios/04/acnet-hdn1/acnet-hdn1/frame_%08d_codec-acnet-hdn1_up-4.0.png' and index in the range 0-4
 def image_convert(MAX_CONCURRENT_TASKS,format, NOME_SERIE):
     image_task = asyncio.run(convert_to_img(max_tasks=MAX_CONCURRENT_TASKS, format=format, serie=NOME_SERIE))
     etapa_write('image_convert',f';{image_task}')
